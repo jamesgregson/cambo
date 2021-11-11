@@ -10,7 +10,7 @@
             var count = 0;
 
             function timer_callback(){
-                socket.emit('set_pwm', {pwmL: count, pwmR: -count} );
+                socket.emit('set_pwm', {pwmL: count%256, pwmR: count%256} );
                 count += 1;
             }
 

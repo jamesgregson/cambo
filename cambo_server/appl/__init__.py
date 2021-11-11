@@ -16,6 +16,6 @@ socketio = SocketIO(app)
 from appl import routes
 from appl import hardware
 
-app.hw = hardware.DummyHardware()
+app.hw = hardware.RasPiHardware()
 
 socketio.run(app)
