@@ -1,0 +1,2 @@
+# cambo
+Simple camera robot
