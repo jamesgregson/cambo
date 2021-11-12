@@ -33,9 +33,9 @@ try:
         def __init__( self, *args, **kwargs ):
             self._name = 'RasPi Hardware'
             GPIO.setwarnings(False)
-            GPIO.setmod( GPIO.BCM )
-            GPIO.setup( 12, 1000 )
-            GPIO.setup( 13, 1000 )
+            GPIO.setmode( GPIO.BCM )
+            GPIO.setup( 12, GPIO.OUT )
+            GPIO.setup( 13, GPIO.OUT )
             self._pwmL = GPIO.PWM( 12, 1000 )
             self._pwmR = GPIO.PWM( 13, 1000 )
             self._dutyL = 0
