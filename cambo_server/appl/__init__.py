@@ -11,11 +11,11 @@ app = Flask(
         )
 app.config['SECRET_KEY'] = 'password'
 
-socketio = SocketIO(app)
+socketio = SocketIO(app,cors_allows_origins='*')
 
 from appl import routes
 from appl import hardware
 
 app.hw = hardware.RasPiHardware()
 
-socketio.run(app)
+socketio.run(app,host='0.0.0.0')
