@@ -13,5 +13,11 @@ pip install flask dotenv flask-socketio
 
 ## Usage
 
-Hello
+```bash
+cd ~/mjpg-streamer/mjpg-streamer-experimental
+mjpg_streamer -i "input_raspicam.so" -o "output_http.so" &
+cd ~/Code/cambo/cambo_server
+python3 cambo.py
+```
 
+Load website at [http://cammy.local:5000](http://cammy.local:5000).
