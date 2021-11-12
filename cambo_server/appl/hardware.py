@@ -12,7 +12,7 @@ class DummyHardware:
 
     @left_pwm.setter
     def left_pwm( self, val ):
-        self._pwmL = max( 0, min( 255, val ) )
+        self._pwmL = max( 0, min( 100, val ) )
 
     @property
     def right_pwm( self ):
@@ -20,7 +20,7 @@ class DummyHardware:
 
     @right_pwm.setter
     def right_pwm( self, val ):
-        self._pwmR = max( 0, min( 255, val ) )
+        self._pwmR = max( 0, min( 100, val ) )
     
     @property
     def quaternion( self ):
@@ -49,7 +49,7 @@ try:
 
         @left_pwm.setter
         def left_pwm( self, val ):
-            self._dutyL = max( 0, min( 255, val ) )
+            self._dutyL = max( 0, min( 100, val ) )
             self._pwmL.ChangeDutyCycle(self._dutyL)
 
         @property
@@ -58,7 +58,7 @@ try:
 
         @right_pwm.setter
         def right_pwm( self, val ):
-            self._dutyR = max( 0, min( 255, val ) )
+            self._dutyR = max( 0, min( 100, val ) )
             self._pwmR.ChangeDutyCycle(self._dutyR)
 
         @property
